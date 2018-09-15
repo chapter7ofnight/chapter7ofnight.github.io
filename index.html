@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<title>刘有才_我自冷眼看世界,不问天下是与非</title>
+
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+<style>
+.breath {
+	height: 100%;
+	width: 100%;
+    overflow:hidden;
+	
+	background-image: -webkit-radial-gradient(70% 30%, #A0E2D4 5%, #43BDC2 40%, #CA6BA7 70%);
+
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-duration:3000ms;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:alternate;
+	-webkit-animation-name:opacity;
+}
+@-webkit-keyframes opacity {
+    0% {
+        opacity: 1;
+    }
+	100% {
+        opacity: 0.5;
+    }
+}
+
+.avatar-div {
+	position: relative;
+	top: 10%;
+}
+.avatar {
+	width: 10%;
+	border-radius: 50%;
+	margin-left: 45%;
+}
+
+.notice {
+	position: relative;
+	top: 15%;
+	
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-duration:3000ms;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:alternate;
+	-webkit-animation-name:scale;
+}
+@-webkit-keyframes scale {
+	0% {
+		transform:scale(1);
+	}
+	100% {
+		transform:scale(1.03);
+	}
+}
+
+.btn-postition {
+	position: relative;
+	top: 30%;
+}
+</style>
+</head>
+
+<body>
+	<div class="breath">
+		<div class="avatar-div">
+			<img class="avatar" src="avatar.jpg"/>
+		</div>
+		<div class="notice">
+			<h2 class="text-center" style="color: #286EA0;">你与卓越<br>不过一次点击的距离</h2>
+		</div>
+		<div class="form-group btn-postition">
+			<button class="btn btn-primary col-md-2 offset-4" onclick="jump('/fidei')">技术即信仰</button>
+			<button class="btn btn-primary col-md-2" onclick="jump('/world')">最美少年时</button>
+		</div>
+	</div>
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script>
+$(function() {
+	adaptScreen();
+});
+
+$(window).resize(function() {
+	adaptScreen();
+});
+
+function adaptScreen() {
+	$("body").height($(window).height());
+	$("body").width($(window).width());
+}
+
+function jump(target) {
+	$(location).attr("href", target);
+}
+</script>
+</html>
